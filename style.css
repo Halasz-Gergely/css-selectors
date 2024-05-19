@@ -56,7 +56,46 @@ header p{
     float:left;
 }
 
+main {
+    margin: 10px;
+}
+
+section:not(section section) {
+    width: 70%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
 h1{
     text-align: center;
     clear: both;
+}
+
+/* descendant selector */
+div p {
+    background-color: aquamarine;
+    border: 1px solid aqua;
+    border-radius: 5px;
+}
+/* child selector */
+div > address {
+    background-color: orange;
+        border: 1px solid orangered;
+        border-radius: 5px;
+    }
+/* general sibling selector */
+ul ~ li {
+    background-color: blueviolet;
+    color: white;
+    border: 1px solid blueviolet;
+    border-radius: 5px;
+}
+/* adjacent sibling selector */
+dl + dt {
+    background-color: rgb(156, 158, 60);
+        color: white;
+        border: 1px solid rgb(156, 158, 60);
+        border-radius: 5px;
 }

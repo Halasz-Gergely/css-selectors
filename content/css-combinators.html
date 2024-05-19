@@ -1,33 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../style.css">
-</head>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <img src="https://halaszgergely.hu/favicon/favicon-32x32.png" alt="just an icon">
-        <p>Some catchy phrase</p>
+      <img
+        src="https://halaszgergely.hu/favicon/favicon-32x32.png"
+        alt="just an icon"
+      />
+      <p>Some catchy phrase</p>
     </header>
     <nav class="navbar">
-        <ul>
-            <li><a href="css-element.html">css-element</a></li>
-            <li><a href="css-id.html">css-id</a></li>
-            <li><a href="css-class.html">css-class</a></li>
-            <li><a href="css-asterisk.html">css-asterisk</a></li>
-            <li><a href="css-combinators.html">css-combinators</a></li>
-            <li><a href="css-pseudo-class.html">css-pseudo-class</a></li>
-            <li><a href="css-attribute.html">css-attribute</a></li>
-        </ul>
+      <ul>
+        <li><a href="css-element.html">css-element</a></li>
+        <li><a href="css-id.html">css-id</a></li>
+        <li><a href="css-class.html">css-class</a></li>
+        <li><a href="css-asterisk.html">css-asterisk</a></li>
+        <li><a href="css-combinators.html">css-combinators</a></li>
+        <li><a href="css-pseudo-class.html">css-pseudo-class</a></li>
+        <li><a href="css-attribute.html">css-attribute</a></li>
+      </ul>
     </nav>
     <main>
-        <h1>Combinators</h1>
+      <h1>Combinator selectors</h1>
+      <section>
+        <h2>Descendant selector</h2>
+        <h3>all the descendants of type will be selected -> (div p {})</h3>
+        <div>
+          <p>first paragraph</p>
+          <p>second paragraph</p>
+          <div>
+            <p>third paragraph</p>
+          </div>
+        </div>
+        <p>fourth paragraph</p>
+      </section>
+      <section>
+        <h2>Child selector</h2>
+        <h3>
+          only the direct children will be selected, descendants will not be -> (
+           div > address {})
+        </h3>
+        <div>
+          <address>first address</address>
+          <address>second address</address>
+          <section>
+            <address>third address</address>
+          </section>
+        </div>
+        <address>fourth address</address>
+      </section>
+    <section>
+        <h2>General sibling selector</h2>
+        <h3>all siblings of type will be selected on the same dom level -> (ul ~ li {})</h3>
+        <ul>
+            <li>list item 1</li>
+            <li>list item 2</li>
+            <li>list item 3</li>
+        </ul>
+        <li>list item 4</li>
+        <li>list item 5</li>
+        <hr>
+        <li>list item 6</li>
+    </section>
+      <section>
+        <h2>Adjacent sibling selector</h2>
+        <h3>only sibling on the same dom level and directly after the element in dom -> (dl + dt{})</h3>
+        <dl>
+            <dt>dt 1</dt>
+            <dt>dt 2</dt>
+            <dt>dt 3</dt>
+        </dl>
+        <dt>dt 4</dt>
+        <dt>dt 5</dt>
+        <hr>
+        <dt>dt 6</dt>
+      </section>
     </main>
     <footer></footer>
-</body>
-
+  </body>
 </html>
